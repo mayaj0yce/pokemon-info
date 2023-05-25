@@ -46,6 +46,7 @@ When I visit this site I want to be able to store my current pokedex list
 I want to be able to find information to help me complete my pokedex by showing information about a pokemon I don’t have - where to find it and how to catch it, etc. 
 I want this site to store my information for future use
 
-Preview
+Preview and loose assignments 
+[Technical Design Document - Google Docs.pdf](https://github.com/mayaj0yce/pokemon-info/files/11560126/Technical.Design.Document.-.Google.Docs.pdf)
 
-![_Technical Design Document](https://github.com/mayaj0yce/CommunityService/assets/129634010/39d2b261-7295-47d5-93fd-5961871d92a5)
+
