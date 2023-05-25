@@ -7,3 +7,123 @@ tanner
 
 
 -->
+
+
+<!DOCTYPE html>
+<html lang="en"></html>
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  
+  <!--Weather API and Key is above-->
+  
+
+
+  <link rel="stylesheet" href="./Assets/style.css"/>
+  <title>Local Weather Forcaster 5 Days</title>
+      <!--Moved the Jquery and Dayjs script sources here as shown in activity 25 in module 5. -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"
+  ></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  ></script>
+</head>
+  
+  
+<body>
+    
+  <header class="header">
+    <h1 class=""><i class=""></i>Local Weather</h1>
+    <p>Search a city for its current local weather!</p>
+      <!--Display date, time and local city here.-->
+  </header>
+
+  <main class="">
+      <!-- Place your content for the "Locations" column here -->
+    <div class="container">
+      <div class="container"></div>
+      <div class="column locations">
+        <h2>Search for a City</h2>
+        <div id="city-search" class="btn">
+          <input type="text" id="cityInput" placeholder="Enter city name">
+          <button id="searchButton" class="btn">Search</button>
+          <div id="resultContainer">
+            <h3>Search History</h3>
+            <ul id="cityList" class="btn">
+              <!--LIST previously Searched CITIES-->
+            </ul>
+            <button id="clearSearchButton" class="btn">Clear Search History</button>
+          </div>
+        </div>
+        </div>
+      
+
+
+
+
+    
+      <div class="column forecast">
+        <h2> Current Weather in:</h2>
+        <div class="current-forecast">
+            <!--put the current day's forecast here-->
+        </div>
+          
+        <div class="row">
+            <!-- Place your content for the first row of the "5-Day Forecast" column here -->
+          <div class="col-day">
+            <div class="forecast-panel">
+              <h3 class="forecast-panel-title"></h3>
+            </div>
+
+          </div>
+        </div>
+        <div class="rows">
+          <div class="grid-container">
+            <div class="grid-item"></div>
+              
+        </div>
+
+
+
+            <!-- Place your content for the second row of the "5-Day Forecast" column here -->
+          <h2> Four Day Forecast:</h2>
+        <div class="current-forecast">
+            <!--put the current day's forecast here-->
+
+        </div>
+          
+        <div class="row">
+            <!-- Place your content for the first row of the "5-Day Forecast" column here -->
+          <div class="col-day">
+            <div class="forecast-panel">
+              <h3 class="forecast-panel-title"></h3>
+            </div>
+
+          </div>
+        </div>
+        <div class="rows">
+          <div class="grid-container">
+            <div class="header">Day 2 Header
+              <div class="grid-item">Day2</div></div>
+                
+            <div class="header">Day 3 Header   
+              <div class="grid-item">Day3</div></div>
+                
+            <div class="header">Day 4 Header    
+              <div class="grid-item">Day4</div></div>
+
+            <div class="header">Day 5 Header     
+              <div class="grid-item">Day5</div></div>
+                
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./Assets/script.js"></script>
+      <!-- <script src="./Assets/script.js"></script> -->
+</body>
+  <footer></footer>
+</html>
