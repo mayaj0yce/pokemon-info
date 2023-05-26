@@ -22,8 +22,8 @@ fetch(requestUrl)
             consolelog(responseText)
         }
     );
-
-    .then((response) => {
+// the TextDecoderStream
+     .then((response) => {
         if (response.ok) {
           return response.json();
         } else {
