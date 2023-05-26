@@ -1,3 +1,6 @@
+
+
+
 header {
 
     background-color: #15142b;
@@ -6,8 +9,12 @@ header {
     text-align: center;
   }
 
+  .section1 {
+    background-image: url("./assets/images/AnimeGrasslands.jpg");
+  }
+
   .section-header {
-    background-image: url('path/to/your/image.jpg');
+    background-image: url();
     background-size: cover; /* Adjust as needed */
     background-repeat: no-repeat;
     background-position: center center;
@@ -15,7 +22,7 @@ header {
 
   /* CSS for Search Bar */
   .search-bar {
-    background-color: #f2f2f2;
+        background-color: #f2f2f2;
     padding: 10px;
     text-align: center;
   }
@@ -28,7 +35,6 @@ header {
   }
 
   .column1 {
-    margin-bottom: ;
     width: 48%;
     background-color: #c97474;
     padding: 10px;
