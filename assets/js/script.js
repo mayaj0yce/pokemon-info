@@ -1,5 +1,3 @@
-async function getPokemonInfo(pokemon) {
-  const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
 
   try {
     const response = await fetch(apiUrl);
@@ -65,10 +63,40 @@ function handleSearch() {
 // Adds an event listener to the searchButton. //MR 31.05.23
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', handleSearch);
-=======
-// Maridon's Search Bar: 
 
-// Function searching the API: 
+function searchAPI(pokeName) {
+    var url = "https://pokeapi.co/api/v2/ability/{id or name}/"
+
+    // Json method on the response. //
+    fetch(requestUrl)
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("NETWORK RESPONSE ERROR");
+            }
+        })
+        .then(
+            (response) => {
+                setPokemon({
+                    name: pokemonName,
+                    species: response.data.species.name,
+                    // Image(gif here?)
+                    HP: response.data.stats[0].base.stat,
+                    type: response.data.type[0].ytpe.name,
+                })
+                consolelog(response)
+            })
+
+        .then(data => {
+            console.log(data);
+        })
+        .catch((error) => console.error("FETCH ERROR:", error));
+
+
+
+    var searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+
 
 function searchAPI(pokeName) {
   var url = "https://pokeapi.co/api/v2/pokemon/{id or name}/";
@@ -86,5 +114,3 @@ function searchAPI(pokeName) {
     
 
 }}
-  
-
