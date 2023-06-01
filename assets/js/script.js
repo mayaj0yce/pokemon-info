@@ -11,6 +11,7 @@ async function getPokemonNameInfo(pokemon) {
     const pokemonAbilities = data.abilities.map(ability => ability.ability.name);
     
 
+
     // Return the extracted information - ***ISSUE***, only accepts all lower case pokemon names, need to make sure it accepts and prints the pokemon name's first letter. //MR 31.05.23
     return {
       name: pokemonName,
@@ -179,3 +180,26 @@ function handleSearch() {
 // Adds an event listener to the searchButton. //MR 31.05.23
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', handleSearch);
+=======
+// Maridon's Search Bar: 
+
+// Function searching the API: 
+
+function searchAPI(pokeName) {
+  var url = "https://pokeapi.co/api/v2/pokemon/{id or name}/";
+
+  fetch(url).then(function(response){
+    return response.json() 
+    
+    })
+        
+  .then(function(data){
+    //Sets a variable that clears the data when called below. //
+    clear#######()
+
+    console.log(data)
+    
+
+}}
+  
+
