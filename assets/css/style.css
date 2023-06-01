@@ -36,7 +36,7 @@ header {
   }
 
   .column1 {
-    margin-bottom: ;
+    margin-bottom: 0px;
     width: 48%;
     background-color: #c97474;
     padding: 10px;
@@ -48,8 +48,8 @@ header {
   }
 
   footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #f5e400;
+    color: #000000;
     padding: 20px;
     text-align: center;
   }
