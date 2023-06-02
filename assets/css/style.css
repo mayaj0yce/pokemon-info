@@ -2,6 +2,7 @@
 header {
 
 
+
   background-color: #15142b;
   color: #fff;
   padding: 10px;
@@ -28,6 +29,7 @@ background-position: center center;
     background-color: #f2f2f2;
 padding: 10px;
 text-align: center;
+
 }
 
 /* CSS for Section with Two Columns */
@@ -38,6 +40,7 @@ margin: 1px;
 }
 
 .column1 {
+
 margin-bottom: 0px;
 width: 48%;
 background-color: #c97474;
