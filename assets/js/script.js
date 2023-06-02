@@ -20,7 +20,7 @@
     console.error('Error:', error);
     return null;
   }
-}
+
 
 // Function to handle the search button click event. //MR 31.05.23
 function handleSearch() {
@@ -64,7 +64,7 @@ function handleSearch() {
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', handleSearch);
 
-function searchAPI(pokeName) {
+function searchAPI(pokeName) 
     var url = "https://pokeapi.co/api/v2/ability/{id or name}/"
 
     // Json method on the response. //
