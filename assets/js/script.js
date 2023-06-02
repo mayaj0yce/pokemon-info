@@ -68,3 +68,9 @@ searchButton.addEventListener('click', handleSearch);
 
 
 //fetch section. //
+
+function performSearch() {
+  const searchInput = document.getElementById('searchInput');
+  const query = searchInput.value;
+  fetchResults(query);
+}
