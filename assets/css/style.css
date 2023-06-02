@@ -1,17 +1,14 @@
 /* Added shadow text to make text more clear */
 header {
-
-
-
-  background-color: #15142b;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  font-size: xx-large;
-  text-shadow: 5px 5px 5px rgb(0, 0, 0);
-  
-  
-}
+    background-color: #15142b;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: xx-large;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+    
+    
+  }
 
 .section1 {
 background-image: url("./assets/images/AnimeGrasslands.jpg");
@@ -26,7 +23,7 @@ background-position: center center;
 
 /* CSS for Search Bar */
 .search-bar {
-    background-color: #f2f2f2;
+background-color: #f2f2f2;
 padding: 10px;
 text-align: center;
 
@@ -40,7 +37,6 @@ margin: 1px;
 }
 
 .column1 {
-
 margin-bottom: 0px;
 width: 48%;
 background-color: #c97474;
@@ -57,4 +53,9 @@ background-color: #f5e400;
 color: #000000;
 padding: 20px;
 text-align: center;
+position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 }
+/* Fixed the footer to stay at the bottom of the page
