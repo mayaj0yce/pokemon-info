@@ -1,18 +1,25 @@
+// const image = 'https:' + $('a[href*="/wiki/File:"] > img').attr("src");
 
-// import { axios } from "@pipedream/platform"
-export default defineComponent({
-  props: {
-    giphy: {
-      type: "app",
-      app: "giphy",
-    }
-  },
-  async run({steps, $}) {
-    return await axios($, {
-      url: `api.giphy.com/v1/gifs/random`,
-      params: {
-        api_key: `${this.giphy.$auth.api_key}`,
-      },
-    })
-  },
+// // 7964debe-a160-40e6-8cc3-7f21841c780f api key
+// var  https://api.pokemontcg.io/v2/cards{APIKEY}
+// function gifImage() {
+// fetch (requestUrl2)
+
+// .then() json
+// .then()
+// }
+
+fetch("api.pokemontcg.io/v2/cards", {
+  "method": "GET",
+  "headers": {
+  }
+  })
+.then(response => {
+  console.log(response);
 })
+.catch(err => {
+  console.error(err);
+});
+
+https://api.pokemontcg.io/v2/cards?q=name:/$
+
