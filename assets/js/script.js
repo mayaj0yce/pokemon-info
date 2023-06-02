@@ -64,3 +64,7 @@ function handleSearch() {
 // Adds an event listener to the searchButton. //MR 31.05.23
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', handleSearch);
+
+
+
+//fetch section. //
