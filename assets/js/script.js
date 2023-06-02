@@ -1,6 +1,5 @@
 async function getPokemonInfo(pokemon) {
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
-
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
