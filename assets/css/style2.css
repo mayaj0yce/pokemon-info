@@ -1,0 +1,109 @@
+/* Added shadow text to make text more clear */
+*/ header {
+    background-color: #15142b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.section1 {
+    background-image: url("./assets/images/AnimeGrasslands.jpg");
+}
+
+.section-header {
+    background-image: url();
+    background-size: cover;
+    /* Adjust as needed */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* CSS for Search Bar */
+.search-bar {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    font-size: xx-large;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+
+
+}
+
+/* CSS for Section with Two Columns */
+.section {
+    display: flex;
+    justify-content: space-between;
+    margin: 1px;
+    background-image: url('pikachu.png');
+    background-color: #4E47DB;
+    color: #3DF804;
+    padding: 40px;
+    text-align: center;
+
+    .section1 {
+        background-image: url("./assets/images/AnimeGrasslands.jpg");
+    }
+
+    .header-image {
+        background-image: url('pikachu.png');
+        background-size: cover;
+        /* Adjust as needed */
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        .section-header {
+            background-image: url();
+            background-size: cover;
+            /* Adjust as needed */
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        /* CSS for Search Bar */
+        .search-bar {
+            background-color: #F2F2F2;
+            padding: 10px;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        /* CSS for Section with Two Columns */
+        .section {
+            display: flex;
+            justify-content: space-between;
+            margin: 1px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .column1 {
+            margin-bottom: 0px;
+            width: 48%;
+            background-color: #c97474;
+            padding: 10px;
+        }
+
+        .column2 {
+            width: 48%;
+            background-color: #92a159;
+            padding: 10px;
+        }
+
+        footer {
+            background-color: #f5e400;
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 2.5rem;
+        }

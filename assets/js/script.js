@@ -21,7 +21,7 @@ async function getPokemonInfo(pokemon) {
     console.error('Error:', error);
     return null;
   }
-}
+
 
 // Function to handle the search button click event. //MR 31.05.23
 function handleSearch() {
@@ -63,4 +63,5 @@ function handleSearch() {
 
 // Adds an event listener to the searchButton. //MR 31.05.23
 const searchButton = document.getElementById('searchButton');
+
 searchButton.addEventListener('click', handleSearch);
