@@ -30,15 +30,14 @@ header {
 }
 
 /* mj */
+main {
+  text-align: center;
+}
 
 .column1 {
   display: inline-flex;
-  /* align-content: center; */
-  justify-content: center;
+  color: #15142b;
   margin: 0px;
-  
-  background-color: 
-  color: #3DF804;
   padding: 40px;
   text-align: center;
 
