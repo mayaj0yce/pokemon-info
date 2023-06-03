@@ -22,55 +22,56 @@ async function getPokemonInfo(pokemon) {
   }
 
 
-// Function to handle the search button click event. //MR 31.05.23
-function handleSearch() {
-  const pokeInput = document.getElementById('pokeInput');
-  const searchTerm = pokeInput.value.trim();
+  // Function to handle the search button click event. //MR 31.05.23
+  function handleSearch() {
+    const pokeInput = document.getElementById('pokeInput');
+    const searchTerm = pokeInput.value.trim();
 
-  // Calls the API function with the relevant search term. This creates a container below the search bar that needs to be moved into MJ's section //MR 31.05.23
-  getPokemonInfo(searchTerm)
-    .then(result => {
-      const resultContainer = document.getElementById('resultContainer');
+    // Calls the API function with the relevant search term. This creates a container below the search bar that needs to be moved into MJ's section //MR 31.05.23
+    getPokemonInfo(searchTerm)
+      .then(result => {
+        const resultContainer = document.getElementById('resultContainer');
 
-      // Clears previous search results. //MR 31.05.23
-      resultContainer.innerHTML = '';
+        // Clears previous search results. //MR 31.05.23
+        resultContainer.innerHTML = '';
 
-      if (result) {
-        // Creates and appends elements in order to display the Pokémon information. //MR 31.05.23
-        const pokemonName = document.createElement('h3');
-        pokemonName.textContent = `Name: ${result.name}`;
+        if (result) {
+          // Creates and appends elements in order to display the Pokémon information. //MR 31.05.23
+          const pokemonName = document.createElement('h3');
+          pokemonName.textContent = `Name: ${result.name}`;
 
-        const abilitiesList = document.createElement('p');
-        abilitiesList.textContent = `Abilities: ${result.abilities.join(', ')}`;
+          const abilitiesList = document.createElement('p');
+          abilitiesList.textContent = `Abilities: ${result.abilities.join(', ')}`;
 
-        const movesList = document.createElement('p');
-        movesList.textContent = `Moves: ${result.moves.join(', ')}`;
+          const movesList = document.createElement('p');
+          movesList.textContent = `Moves: ${result.moves.join(', ')}`;
 
-        resultContainer.appendChild(pokemonName);
-        resultContainer.appendChild(abilitiesList);
-        resultContainer.appendChild(movesList);
-      } else {
-        const errorMessage = document.createElement('p');
-        errorMessage.textContent = 'No Pokémon found with the provided ID or name.';
-        resultContainer.appendChild(errorMessage);
-      }
-    });
+          resultContainer.appendChild(pokemonName);
+          resultContainer.appendChild(abilitiesList);
+          resultContainer.appendChild(movesList);
+        } else {
+          const errorMessage = document.createElement('p');
+          errorMessage.textContent = 'No Pokémon found with the provided ID or name.';
+          resultContainer.appendChild(errorMessage);
+        }
+      });
 
-  // Clears the searchButton's input field. //MR 31.05.23
-  pokeInput.value = '';
-}
+    // Clears the searchButton's input field. //MR 31.05.23
+    pokeInput.value = '';
+  }
 
-// Adds an event listener to the searchButton. //MR 31.05.23
-const searchButton = document.getElementById('searchButton');
-searchButton.addEventListener('click', handleSearch);
+  // Adds an event listener to the searchButton. //MR 31.05.23
+  const searchButton = document.getElementById('searchButton');
+  searchButton.addEventListener('click', handleSearch);
 
-function searchAPI(pokeName) 
+  function searchAPI(pokeName)
 
 
-//fetch section. //
+  //fetch section. //
 
-function performSearch() {
-  const searchInput = document.getElementById('searchInput');
-  const query = searchInput.value;
-  fetchResults(query);
+  function performSearch() {
+    const searchInput = document.getElementById('searchInput');
+    const query = searchInput.value;
+    fetchResults(query);
+  }
 }
