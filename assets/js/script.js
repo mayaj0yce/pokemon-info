@@ -1,5 +1,6 @@
 async function getPokemonInfo(pokemon) {
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
@@ -62,15 +63,5 @@ function handleSearch() {
 
 // Adds an event listener to the searchButton. //MR 31.05.23
 const searchButton = document.getElementById('searchButton');
+
 searchButton.addEventListener('click', handleSearch);
-
-function searchAPI(pokeName) 
-
-
-//fetch section. //
-
-function performSearch() {
-  const searchInput = document.getElementById('searchInput');
-  const query = searchInput.value;
-  fetchResults(query);
-}
