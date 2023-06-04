@@ -1,59 +1,65 @@
 /* Added shadow text to make text more clear */
 header {
-
-
-
-  background-color: #15142b;
-  color: #fff;
+  color: #bf2828;
   padding: 10px;
   text-align: center;
   font-size: xx-large;
-  text-shadow: 5px 5px 5px rgb(0, 0, 0);
-  
-  
+  text-shadow: 1px 2px 2px rgb(46, 8, 8);
+  opacity: 100%
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-
-
-
 .section-header {
-background-image: url();
-background-size: cover; /* Adjust as needed */
-background-repeat: no-repeat;
-background-position: center center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.title-bar {
+  background-color: #f2f2f2;
+  padding-block: 10px;
+  text-align: center;
+  opacity: 80%;
+}
+
+.title-text {
+  opacity: 100%;
 }
 
 /* CSS for Search Bar */
 .search-bar {
-    background-color: #f2f2f2;
-padding: 10px;
-text-align: center;
-
+  background-color: #f2f2f2;
+  padding-block: 10px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* CSS for Section with Two Columns */
 .section {
-display: flex;
-justify-content: space-between;
-margin: 1px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .column1 {
-
-margin-bottom: 0px;
-width: 48%;
-background-color: #c97474;
-padding: 10px;
+  margin-bottom: 0px;
+  width: 47%;
+  background-color: #c97474;
+  padding-right: 10px;
 }
 .column2 {
-width: 48%;
-background-color: #92a159;
-padding: 10px;
+  width: 47%;
+  background-color: #92a159;
+  padding: 10px;
 }
 
 footer {
-background-color: #f5e400;
-color: #000000;
-padding: 20px;
-text-align: center;
+  background-color: #f5e400;
+  color: #000000;
+  padding: 20px;
+  text-align: center;
 }
