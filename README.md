@@ -1,56 +1,70 @@
-This will be a repo shared in order to create a website with teammates.
-Proposal
 
-- What problem does your app solve?
-Tracks your pokemon
+# Title
 
-- Be as specific as possible; how does your app solve the problem?
-Users can track, sort, have information listed, etc. 
 
-- What is the mission statement (e.g. an elevator pitch of the app, what is your team’s goal(s) with this app, etc.)?
+
+## The problem our app solves:
+
+*Be as specific as possible; how does your app solve the problem?
+Users can track, sort, have information listed, etc.*
+
+Lists information about Pokemon
+
+
+## Our Mission Statement:
+ *(e.g. an elevator pitch of the app, what is your team’s goal(s) with this app, etc.)?*
+
 Get them all. Helps users dynamically track the pokemon collection they have and provide resources to complete their pokedex.
 Features
 
-- What features are required for your minimum viable product?
+## Features
+
+**The features required for a minimum viable Product:**
+
 When a user enters a pokemon name the (pokemon) API will return facts and stats on pokemon, 
 This will also allow the user to see a gif of that pokemon appear (giphy API) 
 
-- What features may you wish to put in a future release?
+**Features we would like to put in a future release:**
+
 Users compare collections around the world
 
-- What do the top 3 similar apps do for their users?
+**The top 3 similar apps and what they do for their user:**
+
 Pokedex apps, but they’re not ideal.
 Frameworks - Libraries
 
-- What 3rd party frameworks/libraries are you considering using?
+## APIs
+
+**The 3rd party frameworks/libraries we used:**
+
 The library/database found here: https://pokeapi.co/
 
-- Do APIs require you to contact its maintainer to gain access?
+***- Do APIs require you to contact its maintainer to gain access?***
+
 Pokemon api is free and open access 
 The gif api requires an access code
 
-- Are you required to pay to use the API? 
-No - Our group opted to use a free api to be kind to our wallets and yours
+The API is free with high to non-existent per-use caps.
 
-Target Audience
+## Target Audience
 
-- Who is your target audience? Be specific.
-Pokemon users and fans of all ages
+**Our Target Audience:**
+
+Pokemon users and fans of all ages who want to be able to fill ther pokedexes and earn 100% pokedex completion in their games.
 
 
-User Stories
+**User Story:**
 
-- Create at least 1 user story for your app
-I am a User and as a User I want to be able to visit a site where I can track my current pokedex.
-When I visit this site I want to be able to store my current pokedex list
-I want to be able to find information to help me complete my pokedex by showing information about a pokemon I don’t have - where to find it and how to catch it, etc. 
-I want this site to store my information for future use
+-As a user I want to be able to visit a site where I can search for information about pokemon.
+-When I visit this site I want to be able to search for information about pokemon.
+-When I enter a pokemon into the searchbar information appears which helps me learn about pokemon. 
 
-Preview and loose assignments 
+## Design Document: 
 [Technical Design Document - Google Docs.pdf](https://github.com/mayaj0yce/pokemon-info/files/11560126/Technical.Design.Document.-.Google.Docs.pdf)
 
-
-image only
+## Technical Design Layout:
 ![_Technical Design Document (1)](https://github.com/mayaj0yce/pokemon-info/assets/129634010/575b0d52-ef65-4dc4-8541-bff5c3e713da)
 
-  
+## Code Sources
+
+*Put links here to the pages and resources you used, include a short sentence about why/how you used it.*

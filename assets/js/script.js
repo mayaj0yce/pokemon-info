@@ -1,4 +1,5 @@
-// Adds an event listener to the searchButton
+// Adds an event listener to the searchButton. //MR 31.05.23
+
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', handleSearch);
 
@@ -31,6 +32,9 @@ async function getPokemonInfo(pokemon) {
     return null;
   }
 }
+
+
+// Function to handle the search button click event. //MR 31.05.23
 
 function handleSearch() {
   const pokeInput = document.getElementById('pokeInput');
@@ -80,4 +84,27 @@ function handleSearch() {
     });
 
   pokeInput.value = '';
+
+}
+
+// Console logs a list of locations but only for pikachu or any pokemon you manually insert into the code below. Need to figure out how to embed this in the async await method above. So far all my attempts to do so have failed. 
+async function listEncounterData() {
+  try {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/pikachu/`);
+    const pokemonData = await response.json();
+    console.log(pokemonData);
+
+    const encounterResponse = await fetch(pokemonData.location_area_encounters);
+    const encounterData = await encounterResponse.json();
+
+    for (let i = 0; i < 5; i++) {
+      console.log(encounterData[i].location_area.name);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+listEncounterData();
+
 }
