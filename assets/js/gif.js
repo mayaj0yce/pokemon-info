@@ -21,7 +21,7 @@ var searchHandler = function (response) {
 }
 
 function apiCard() {
-  var apiUrl2 = 'https://api.pokemontcg.io/v2/cards?q=name:' +;
+  var apiUrl2 = 'https://api.pokemontcg.io/v2/cards?q=name:' + ;
 
   fetch(apiUrl2)
     .then(function (response) {
@@ -45,10 +45,8 @@ async function getPokemonInfo(pokemon) {
    
     return {
       name: pokemonName,
-      abilities: pokemonAbilities,
-      moves: pokemonMoves,
-      locationOne: data.location_area_encounters
-    };
+     sprite: pokemonGif
+      };
   } catch (error) {
     console.error('Error:', error);
     return null;

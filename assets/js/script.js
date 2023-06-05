@@ -10,11 +10,13 @@ async function getPokemonInfo(pokemon) {
     const data = await response.json();
 
     const pokemonName = data.name;
+    const pokeImage = data.sprites.front_default ;
     const pokemonAbilities = data.abilities.map(ability => ability.ability.name);
     const pokemonMoves = data.moves.map(move => move.move.name);
 
     return {
       name: pokemonName,
+      sprite: pokeImage,
       abilities: pokemonAbilities,
       moves: pokemonMoves,
       locationOne: data.location_area_encounters
