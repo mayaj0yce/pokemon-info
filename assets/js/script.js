@@ -14,12 +14,14 @@ async function getPokemonInfo(pokemon) {
     const pokemonAbilities = data.abilities.map(ability => ability.ability.name);
     const pokemonMoves = data.moves.map(move => move.move.name);
     pokemonMoves.length = 3;
+    //limits the amount of moves displayed to 3 (not a bajillion)
+
     return {
       name: pokemonName,
       sprite: pokeImage,
       abilities: pokemonAbilities,
       moves: pokemonMoves,
-      locationOne: data.location_area_encounters,
+      // locationOne: data.location_area_encounters,
       
     };
     
@@ -62,7 +64,7 @@ function handleSearch() {
           .then(response => response.json())
           .then(encounterData => {
             const locationOne = document.createElement('p');
-            //area needs to be fixed
+            //encounter data needs to be relocated
             locationOne.textContent = `Location1: ${encounterData.location_area}`;
             console.log(encounterData.location_area);
             resultContainer.appendChild(locationOne);
