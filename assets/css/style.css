@@ -28,6 +28,7 @@ header {
   opacity: 100%;
 }
 
+
 /* CSS for Search Bar */
 .search-bar {
   
@@ -46,6 +47,11 @@ header {
   margin-bottom: 10px;
 }
 
+.column1 {
+  color: white;
+  text-shadow: 1px 2px 2px rgb(46, 8, 8);
+  opacity: 100%;
+}
 
 footer {
   background-color: #f5e400;

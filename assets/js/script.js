@@ -14,15 +14,18 @@ async function getPokemonInfo(pokemon) {
     const pokeImage = data.sprites.front_default;
     const pokemonAbilities = data.abilities.map(ability => ability.ability.name);
     const pokemonMoves = data.moves.map(move => move.move.name);
-    pokemonMoves.length = 3;
+    pokemonMoves.length = 4;
     //limits the amount of moves displayed to 3 (not a bajillion)
     console.log(pokeImage)
+
     return {
       name: pokemonName,
       sprite: pokeImage,
       abilities: pokemonAbilities,
       moves: pokemonMoves,
       // locationOne: data.location_area_encounters,
+
+ 
 
     };
 
@@ -46,7 +49,7 @@ function handleSearch() {
 
       if (result) {
         const pokemonName = document.createElement('h3');
-        pokemonName.textContent = `Name: ${result.name}`;
+        pokemonName.textContent = `Pokemon Name: ${result.name}`;
 
         const abilitiesList = document.createElement('p');
         abilitiesList.textContent = `Abilities: ${result.abilities.join(', ')}`;
@@ -55,17 +58,49 @@ function handleSearch() {
         movesList.textContent = `Moves: ${result.moves.join(', ')}`;
 
 
-        // const pokeImage = document.getElementById('imgResults');
-
-
-
-
         resultContainer.appendChild(pokemonName);
         resultContainer.appendChild(abilitiesList);
         resultContainer.appendChild(movesList);
 
 
-        // fetch(result.locationOne)
+      } else {
+        const errorMessage = document.createElement('p');
+        errorMessage.textContent = 'No Pokémon found with the provided ID or name.';
+        resultContainer.appendChild(errorMessage);
+      }
+    });
+
+};
+
+const img = document.createElement("img");
+img.src =  {apiUrl: pokeImage}
+document.body.appendChild(img);
+
+// function PokemonImages(){
+//   const pokeImgDiv = document.getElementById('resultContainer') pokeImgDiv.innerHTML="";
+//   fetch(apiUrl) .then(
+//     response=>
+//     response.json()
+//   )
+//   .then (( data) => {
+//     let pokeImgUrl =data[0].url;
+//     let pokeImgE1 = document.createElement("img")
+//     pokeImgE1.setAttribute(src, ${pokeImgUrl})
+//     pokeImgE1.classList.add("showcase")
+//     let pokeImgDiv = document.getElementById(".pokeImgDiv")
+//     pokeImgDiv.appendChild(pokeImgE1);
+//   })
+//   .catch (err=>console.log(err))
+// }
+
+  // This next line will just add it to the <body> tag
+  // but you can adapt to make it append to the element you want.
+  document.body.appendChild(img);
+
+  // };
+  pokeInput.value = '';
+
+   // fetch(result.locationOne)
         //   .then(response => response.json())
         //   .then(encounterData => {
         //     const locationOne = document.createElement('p');
@@ -73,46 +108,9 @@ function handleSearch() {
         //     locationOne.textContent = `Location1: ${encounterData.location_area}`;
         //     console.log(encounterData.location_area);
         //     resultContainer.appendChild(locationOne);
-        //  
+        //
         //  });
 
-    } else {
-      const errorMessage = document.createElement('p');
-      errorMessage.textContent = 'No Pokémon found with the provided ID or name.';
-      resultContainer.appendChild(errorMessage);
-    }
-    });
-
-  };
-  
-    function handleImg() {
-      const pokeInput = document.getElementById('pokeInput');
-      const searchTerm = pokeInput.value.trim();
-    
-      getPokemonInfo(searchTerm)
-
-    .then(result => {
-
-      if (result) {
-        const imgResults = document.getElementById('imgResults');
-        imgResults.innerHTML = '';
-
-        const pokeImage = document.getElementById('imgResults');
-
-        imgResults.appendChild(pokeImage);
-    
-  } else {
-    const errorMessage = document.createElement('p');
-    errorMessage.textContent = 'wrong';
-    resultContainer.appendChild(errorMessage);
-  }
-  });
-
-
-pokeInput.value = '';
-
-};
-pokeInput.value = '';
 // // Console logs a list of locations but only for pikachu or any pokemon you manually insert into the code below. Need to figure out how to embed this in the async await method above. So far all my attempts to do so have failed. 
 // async function listEncounterData() {
 //   try {
