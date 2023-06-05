@@ -1,6 +1,14 @@
+// Adds an event listener to the searchButton
+const searchButton = document.getElementById('searchButton');
+searchButton.addEventListener('click', handleSearch);
+//using the same as Maridon for ease and functionality
+
 var pokemon = document.querySelector('poke-search');
 
-var searchHandler = function (event) {
+var searchHandler = function (response) {
+  if (response.ok) {
+    response.json().then(function ())
+  }
   event.preventDefault();
 
   var nameSearch = pokemon.value.trim();
