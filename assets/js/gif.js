@@ -1,37 +1,54 @@
-const image = 'https:' + $('a[href*="/wiki/File:"] > img').attr("src");
+// Adds an event listener to the searchButton
+const searchButton = document.getElementById('searchButton');
+searchButton.addEventListener('click', handleSearch);
+//using the same as Maridon for ease and functionality
 
-// 7964debe-a160-40e6-8cc3-7f21841c780f api key
-var  https://api.pokemontcg.io/v2/cards{APIKEY}
-function gifImage() {
-fetch (requestUrl2)
+var pokemon = document.querySelector('poke-search');
 
-.then()
-.then()
+var searchHandler = function (response) {
+  if (response.ok) {
+    response.json().then(function (data) {
+      displayCard(data, )
+    })
+  }
+  event.preventDefault();
+
+  var nameSearch = pokemon.value.trim();
+
+  if (nameSearch) {
+
+  }
 }
 
-// const image = 'https:' + $('a[href*="/wiki/File:"] > img').attr("src");
+function apiCard() {
+  var apiUrl2 = 'https://api.pokemontcg.io/v2/cards?q=name:' + ;
 
-// // 7964debe-a160-40e6-8cc3-7f21841c780f api key
-// var requestUrl2 =  https://api.pokemontcg.io/v2/cards{APIKEY}
-// function gifImage() {
-// fetch (requestUrl2)
-
-// .then() json
-// .then()
-// }
-
-fetch("api.pokemontcg.io/v2/cards", {
-    "method": "GET",
-    "headers": {
-    }
+  fetch(apiUrl2)
+    .then(function (response) {
+      return response.json();
     })
-  .then(response => {
-    console.log(response);
-  })
-  .catch(err => {
-    console.error(err);
-  });
-  
-  https://api.pokemontcg.io/v2/cards?q=name:/$
-  
-  
+    .then(function (data) {
+      console.log(pokemon)
+    })
+
+}
+
+// gif from pokeAPI 
+async function getPokemonInfo(pokemon) {
+  const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    const pokemonGif = data.name;
+   
+    return {
+      name: pokemonName,
+     sprite: pokemonGif
+      };
+  } catch (error) {
+    console.error('Error:', error);
+    return null;
+  }
+}
