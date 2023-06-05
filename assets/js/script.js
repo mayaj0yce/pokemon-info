@@ -10,17 +10,20 @@ async function getPokemonInfo(pokemon) {
     const data = await response.json();
 
     const pokemonName = data.name;
-    const pokeImage = data.sprites.front_default ;
+    const pokeImage = data.sprites.front_default;
     const pokemonAbilities = data.abilities.map(ability => ability.ability.name);
     const pokemonMoves = data.moves.map(move => move.move.name);
-
+    pokemonMoves.length = 3;
     return {
       name: pokemonName,
       sprite: pokeImage,
       abilities: pokemonAbilities,
       moves: pokemonMoves,
-      locationOne: data.location_area_encounters
+      locationOne: data.location_area_encounters,
+      
     };
+    
+   
   } catch (error) {
     console.error('Error:', error);
     return null;
@@ -45,17 +48,23 @@ function handleSearch() {
 
         const movesList = document.createElement('p');
         movesList.textContent = `Moves: ${result.moves.join(', ')}`;
+       
 
+        const spriteImage = document.createElement('img');
+        // spriteImage.imageContent = `Sprites: ${result.sprites.display()}`;
+        
         resultContainer.appendChild(pokemonName);
         resultContainer.appendChild(abilitiesList);
         resultContainer.appendChild(movesList);
+        resultContainer.appendChild(spriteImage);
 
         fetch(result.locationOne)
           .then(response => response.json())
           .then(encounterData => {
             const locationOne = document.createElement('p');
-            locationOne.textContent = `Location1: ${encounterData.location_area.name}`;
-            console.log(encounterData.location_area.name);
+            //area needs to be fixed
+            locationOne.textContent = `Location1: ${encounterData.location_area}`;
+            console.log(encounterData.location_area);
             resultContainer.appendChild(locationOne);
           });
 
