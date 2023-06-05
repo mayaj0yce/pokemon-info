@@ -70,63 +70,13 @@ function handleSearch() {
       }
     });
 
+
+
+function createPokeImage(pokemon, containerDiv){
+  let pokeImage = document.createElement('img')
+  pokeImage.srcset =    `https://pokeres.bastionbot.org/images/pokemon/${pokemon}.png`
+  containerDiv.append(pokeImage);
+}
+console.log(pokemon)
 };
-
-const img = document.createElement("img");
-img.src =  {apiUrl: pokeImage}
-document.body.appendChild(img);
-
-// function PokemonImages(){
-//   const pokeImgDiv = document.getElementById('resultContainer') pokeImgDiv.innerHTML="";
-//   fetch(apiUrl) .then(
-//     response=>
-//     response.json()
-//   )
-//   .then (( data) => {
-//     let pokeImgUrl =data[0].url;
-//     let pokeImgE1 = document.createElement("img")
-//     pokeImgE1.setAttribute(src, ${pokeImgUrl})
-//     pokeImgE1.classList.add("showcase")
-//     let pokeImgDiv = document.getElementById(".pokeImgDiv")
-//     pokeImgDiv.appendChild(pokeImgE1);
-//   })
-//   .catch (err=>console.log(err))
-// }
-
-  // This next line will just add it to the <body> tag
-  // but you can adapt to make it append to the element you want.
-  document.body.appendChild(img);
-
-  // };
-  pokeInput.value = '';
-
-   // fetch(result.locationOne)
-        //   .then(response => response.json())
-        //   .then(encounterData => {
-        //     const locationOne = document.createElement('p');
-        //     //encounter data needs to be relocated
-        //     locationOne.textContent = `Location1: ${encounterData.location_area}`;
-        //     console.log(encounterData.location_area);
-        //     resultContainer.appendChild(locationOne);
-        //
-        //  });
-
-// // Console logs a list of locations but only for pikachu or any pokemon you manually insert into the code below. Need to figure out how to embed this in the async await method above. So far all my attempts to do so have failed. 
-// async function listEncounterData() {
-//   try {
-//     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/pikachu/`);
-//     const pokemonData = await response.json();
-//     console.log(pokemonData);
-
-//     const encounterResponse = await fetch(pokemonData.location_area_encounters);
-//     const encounterData = await encounterResponse.json();
-
-//     for (let i = 0; i < 5; i++) {
-//       console.log(encounterData[i].location_area.name);
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-// listEncounterData();
+// 
