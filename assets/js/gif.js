@@ -52,3 +52,17 @@ async function getPokemonInfo(pokemon) {
     return null;
   }
 }
+
+
+
+
+
+getPokemonInfo(searchTerm)
+.then(result => {
+  const imgResults = document.getElementById('imgResults');
+  imgResults.innerHTML = '';
+  if (result) {
+    const spriteImage = document.createElement('img');
+    resultContainer.appendChild(spriteImage);
+  }
+})

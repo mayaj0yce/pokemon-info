@@ -1,5 +1,5 @@
 /* Added shadow text to make text more clear */
-.header {
+header {
   color: #bf2828;
   padding: 10px;
   text-align: center;
@@ -17,12 +17,12 @@
   margin-bottom: 10px;
 }
 
-.title-bar {
+/* .title-bar {
   background-color: #f2f2f2;
   padding-block: 10px;
   text-align: center;
   opacity: 80%;
-}
+} */
 
 .title-text {
   opacity: 100%;
@@ -30,7 +30,7 @@
 
 /* CSS for Search Bar */
 .search-bar {
-  background-color: #f2f2f2;
+  
   padding-block: 10px;
   text-align: center;
   margin-top: 10px;
@@ -52,4 +52,8 @@ footer {
   color: #000000;
   padding: 20px;
   text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
