@@ -7,7 +7,9 @@ var pokemon = document.querySelector('poke-search');
 
 var searchHandler = function (response) {
   if (response.ok) {
-    response.json().then(function ())
+    response.json().then(function (data) {
+      displayCard(data, )
+    })
   }
   event.preventDefault();
 
@@ -19,7 +21,7 @@ var searchHandler = function (response) {
 }
 
 function apiCard() {
-  var apiUrl2 = 'https://api.pokemontcg.io/v2/cards?q=name:${pokemon}';
+  var apiUrl2 = 'https://api.pokemontcg.io/v2/cards?q=name:' +;
 
   fetch(apiUrl2)
     .then(function (response) {
@@ -29,4 +31,26 @@ function apiCard() {
       console.log(pokemon)
     })
 
+}
+
+// gif from pokeAPI 
+async function getPokemonInfo(pokemon) {
+  const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    const pokemonGif = data.name;
+   
+    return {
+      name: pokemonName,
+      abilities: pokemonAbilities,
+      moves: pokemonMoves,
+      locationOne: data.location_area_encounters
+    };
+  } catch (error) {
+    console.error('Error:', error);
+    return null;
+  }
 }
