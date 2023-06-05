@@ -107,4 +107,4 @@ async function listEncounterData() {
 
 listEncounterData();
 
-}
+
