@@ -48,9 +48,11 @@ header {
 }
 
 .column1 {
-  color: white;
-  text-shadow: 1px 2px 2px rgb(46, 8, 8);
+  color: black;
+  /* text-shadow: 1px 2px 2px rgb(238, 25, 25); */
   opacity: 100%;
+  background-color: white;
+  opacity: 70%;
 }
 
 footer {
@@ -62,4 +64,10 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+}
+
+.img {
+  content: center;
+  
+
 }

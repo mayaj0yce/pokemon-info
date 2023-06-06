@@ -25,7 +25,7 @@ async function getPokemonInfo(pokemon) {
       moves: pokemonMoves,
       // locationOne: data.location_area_encounters,
 
- 
+
 
     };
 
@@ -58,13 +58,14 @@ function handleSearch() {
         movesList.textContent = `Moves: ${result.moves.join(', ')}`;
 
         const PokeImg = document.createElement('img');
-        PokeImg.src = result.sprite
-resultContainer.appendChild(PokeImg);
+        PokeImg.src = result.sprite;
+       
 
         resultContainer.appendChild(pokemonName);
         resultContainer.appendChild(abilitiesList);
         resultContainer.appendChild(movesList);
-
+        
+        resultContainer.appendChild(PokeImg);
 
       } else {
         const errorMessage = document.createElement('p');
@@ -75,11 +76,11 @@ resultContainer.appendChild(PokeImg);
 
 
 
-function createPokeImage(pokemon, containerDiv){
-  let pokeImage = document.createElement('img')
-  pokeImage.srcset =    `https://pokeres.bastionbot.org/images/pokemon/${pokemon}.png`
-  containerDiv.append(pokeImage);
-}
-console.log(pokemon)
+  function createPokeImage(pokemon, containerDiv) {
+    let pokeImage = document.createElement('img')
+    pokeImage.srcset = `https://pokeres.bastionbot.org/images/pokemon/${pokemon}.png`
+    containerDiv.append(pokeImage);
+  }
+  console.log(pokemon)
 };
 // 
