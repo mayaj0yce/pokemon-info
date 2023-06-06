@@ -55,4 +55,7 @@ Preview and loose assignments
 image only
 ![_Technical Design Document (1)](https://github.com/mayaj0yce/pokemon-info/assets/129634010/575b0d52-ef65-4dc4-8541-bff5c3e713da)
 
+
+![Screenshot (40)](https://github.com/mayaj0yce/pokemon-info/assets/129634010/322ce018-cda7-4e07-af40-de1fdc79717c)
+
   
