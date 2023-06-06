@@ -1,7 +1,7 @@
 // Adds an event listener to the searchButton. //MR 31.05.23
 
 const searchButton = document.getElementById('searchButton');
-searchButton.addEventListener('click', handleSearch);
+searchButton.addEventListener('click', handleSearch, returnCard);
 
 async function getPokemonInfo(pokemon) {
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
@@ -25,7 +25,7 @@ async function getPokemonInfo(pokemon) {
       moves: pokemonMoves,
       // locationOne: data.location_area_encounters,
 
- 
+
 
     };
 
@@ -46,7 +46,7 @@ function handleSearch() {
     .then(result => {
       const resultContainer = document.getElementById('resultContainer');
       resultContainer.innerHTML = '';
-
+     
       if (result) {
         const pokemonName = document.createElement('h3');
         pokemonName.textContent = `Pokemon Name: ${result.name}`;
@@ -57,11 +57,15 @@ function handleSearch() {
         const movesList = document.createElement('p');
         movesList.textContent = `Moves: ${result.moves.join(', ')}`;
 
+        const PokeImg = document.createElement('img');
+        PokeImg.src = result.sprite;
+       
 
         resultContainer.appendChild(pokemonName);
         resultContainer.appendChild(abilitiesList);
         resultContainer.appendChild(movesList);
 
+        resultContainer.appendChild(PokeImg);
 
       } else {
         const errorMessage = document.createElement('p');
@@ -72,11 +76,58 @@ function handleSearch() {
 
 
 
-function createPokeImage(pokemon, containerDiv){
-  let pokeImage = document.createElement('img')
-  pokeImage.srcset =    `https://pokeres.bastionbot.org/images/pokemon/${pokemon}.png`
-  containerDiv.append(pokeImage);
+  }
+
+  
+
+async function getPokemonCard(pokemon) {
+    const cardUrl = `https://api.pokemontcg.io/v2/cards?q=${pokemon}`;
+    
+
+    try {
+        const response2 = await fetch(cardUrl);
+        const data = await response2.json();
+        console.log(pokemon)
+
+        const no = 0;
+
+        const pokeCard = data.images;
+       
+
+        return {
+            card: pokeCard,
+
+        };
+
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+
+    }
 }
-console.log(pokemon)
-};
-// 
+
+function returnCard() {
+    const pokeInput = document.getElementById('pokekInput');
+    const searchTerm = pokeInput.trim();
+
+    getPokemonCard(searchTerm)
+        .then(result => {
+            const imageContainer = document.getElementById('imageContainer');
+            imageContainer.innerHTML = '';
+
+            if (result) {
+                const pokeCard = document.createElement('img');
+                pokeCard.src = result.images;
+
+                imageContainer.appendChild(pokeCard);
+
+
+            } else {
+                const errorMessage = document.createElement('p');
+                errorMessage.textContent = 'No image found.';
+                imageContainer.appendChild(errorMessage);
+            }
+        });
+
+
+}

@@ -1,47 +1,55 @@
-function ImageFind(){
-    fetch('https://pokeapi.co/api/v2/ability/' + (pokemon)) 
-    .then(response => response.json())
-    .then(yourpokemon => console.log(yourpokemon))
-  }
-  
- 
-   
-   function fetchPokemonData(pokemon){
-    let url = pokemon.url 
-      fetch(url)
-      .then(response => response.json())
-      .then(function(pokeData){
-      console.log(pokeData)
-      })
-    }
+
+const searchButton1 = document.getElementById('searchButton');
+searchButton1.addEventListener('click', returnCard);
+
+async function getPokemonCard(pokemon) {
+    const cardUrl = `https://api.pokemontcg.io/v2/cards?q=${pokemon}`;
     
-    function renderPokemon(pokeData){
-        let allPokemonContainer = document.getElementById('poke-container');
-        let pokeContainer = document.createElement("div") 
-        let pokeName = document.createElement('h4')
-        pokeName.innerText = pokeData.name
-        let pokeNumber = document.createElement('p')
-        pokeNumber.innerText = `#${pokeData.id}`
-        let pokeTypes = document.createElement('ul') 
-        //ul list will hold the pokemon types
-        createTypes(pokeData.types, pokeTypes) 
-        // helper function to go through the types array and create li tags for each one
-        pokeContainer.append(pokeName, pokeNumber, pokeTypes);   
-        //appending all details to the pokeContainer div
-        allPokemonContainer.appendChild(pokeContainer);       
-        //appending that pokeContainer div to the main div which will                                                             hold all the pokemon cards
-        }
-        
-        function createTypes(types, ul){
-            types.forEach(function(type){
-            let typeLi = document.createElement('li');
-            typeLi.innerText = type['type']['name'];
-            ul.append(typeLi)
-            })
-          }
-          
-          function createPokeImage(pokeID, containerDiv){
-    let pokeImage = document.createElement('img')
-    pokeImage.srcset =    `https://pokeres.bastionbot.org/images/pokemon/${pokeID}.png`
-    containerDiv.append(pokeImage);
-  }
+
+    try {
+        const response2 = await fetch(cardUrl);
+        const data = await response2.json();
+        console.log(pokemon)
+
+        const no = 0;
+
+        const pokeCard = data.images;
+       
+
+        return {
+            card: pokeCard,
+
+        };
+
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+
+    }
+}
+
+function returnCard() {
+    const pokeInput = document.getElementById('pokekInput');
+    const searchTerm = pokeInput.trim();
+
+    getPokemonCard(searchTerm)
+        .then(result => {
+            const imageContainer = document.getElementById('imageContainer');
+            imageContainer.innerHTML = '';
+
+            if (result) {
+                const pokeCard = document.createElement('img');
+                pokeCard.src = result.images;
+
+                imageContainer.appendChild(pokeCard);
+
+
+            } else {
+                const errorMessage = document.createElement('p');
+                errorMessage.textContent = 'No image found.';
+                imageContainer.appendChild(errorMessage);
+            }
+        });
+
+
+}
