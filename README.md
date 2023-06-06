@@ -1,3 +1,5 @@
+Repo Link https://mayaj0yce.github.io/pokemon-info/
+
 This will be a repo shared in order to create a website with teammates.
 Proposal
 
