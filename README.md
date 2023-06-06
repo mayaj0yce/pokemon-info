@@ -1,4 +1,10 @@
 
+Links https://mayaj0yce.github.io/pokemon-info/
+:) https://github.com/mayaj0yce/pokemon-info.git
+This will be a repo shared in order to create a website with teammates.
+Proposal
+
+
 # Title
 
 
@@ -65,6 +71,12 @@ Pokemon users and fans of all ages who want to be able to fill ther pokedexes an
 ## Technical Design Layout:
 ![_Technical Design Document (1)](https://github.com/mayaj0yce/pokemon-info/assets/129634010/575b0d52-ef65-4dc4-8541-bff5c3e713da)
 
+
 ## Code Sources
 
 *Put links here to the pages and resources you used, include a short sentence about why/how you used it.*
+
+
+![Screenshot (40)](https://github.com/mayaj0yce/pokemon-info/assets/129634010/322ce018-cda7-4e07-af40-de1fdc79717c)
+
+
