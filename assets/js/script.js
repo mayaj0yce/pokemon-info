@@ -57,6 +57,9 @@ function handleSearch() {
         const movesList = document.createElement('p');
         movesList.textContent = `Moves: ${result.moves.join(', ')}`;
 
+        const PokeImg = document.createElement('img');
+        PokeImg.src = result.sprite
+resultContainer.appendChild(PokeImg);
 
         resultContainer.appendChild(pokemonName);
         resultContainer.appendChild(abilitiesList);
