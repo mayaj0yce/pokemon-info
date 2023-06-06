@@ -46,7 +46,7 @@ function handleSearch() {
     .then(result => {
       const resultContainer = document.getElementById('resultContainer');
       resultContainer.innerHTML = '';
-
+     
       if (result) {
         const pokemonName = document.createElement('h3');
         pokemonName.textContent = `Pokemon Name: ${result.name}`;
@@ -64,8 +64,8 @@ function handleSearch() {
         resultContainer.appendChild(pokemonName);
         resultContainer.appendChild(abilitiesList);
         resultContainer.appendChild(movesList);
-        
-        resultContainer.appendChild(PokeImg);
+
+        resultContainer.imagesContainer.appendChild(PokeImg);
 
       } else {
         const errorMessage = document.createElement('p');
@@ -76,11 +76,4 @@ function handleSearch() {
 
 
 
-  function createPokeImage(pokemon, containerDiv) {
-    let pokeImage = document.createElement('img')
-    pokeImage.srcset = `https://pokeres.bastionbot.org/images/pokemon/${pokemon}.png`
-    containerDiv.append(pokeImage);
   }
-  console.log(pokemon)
-};
-// 
